@@ -90,37 +90,6 @@ public class StartProgram {
 
 		}
 		
-		public List<ListItem> searchForItemByStore(String storeName) {
-//		TODO Auto-generated method stub
-		EntityManager em = emfactory.createEntityManager();
-		em.getTransaction().begin();
-		TypedQuery<ListItem> typedQuery	= em.createQuery("select li	from ListItem li where li.store = :selectedStore", ListItem.class);
-		typedQuery.setParameter("selectedStore", storeName);
-		List<ListItem> foundItems = typedQuery.getResultList();
-		em.close();
-		return foundItems;
-		}
-
-		public List<ListItem> searchForItemByItem(String itemName) {
-//		TODO Auto-generated method stub
-		EntityManager em = emfactory.createEntityManager();
-		em.getTransaction().begin();
-		TypedQuery<ListItem> typedQuery	= em.createQuery("select li from ListItem li where li.item	= :selectedItem", ListItem.class);
-		typedQuery.setParameter("selectedItem",	itemName);
-		List<ListItem> foundItems =	typedQuery.getResultList();
-		em.close();
-		return	foundItems;
-		}
-		
-		public ListItem	searchForItemById(int idToEdit)	{
-//		TODO Auto-generated	method stub
-		EntityManager em = emfactory.createEntityManager();
-		em.getTransaction().begin();
-		ListItem found = em.find(ListItem.class, idToEdit);
-		em.close();
-		return	found;
-		}
-		
 		public static void main(String[] args) {
 			// TODO Auto-generated method stub
 			runMenu();
@@ -171,4 +140,4 @@ public class StartProgram {
 		
 		
 
-	}
+}
