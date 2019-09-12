@@ -99,7 +99,7 @@ public class StartProgram {
 
 		public static void runMenu() {
 			boolean goAgain = true;
-			System.out.println("--- Welcome to our awesome shopping list! ---");
+			System.out.println("--- DND A tale of Dragons ---");
 			while (goAgain) {
 				System.out.println("DND player and group rank");
 				System.out.println("Enter 1 to enter a player and add their rank");
